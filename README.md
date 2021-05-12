@@ -2,7 +2,7 @@
 
 [![Open Source Love png1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://opensource.org/) [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😎-FFDD67.svg)](https://gitmoji.dev/) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/iesdevs/iedc/pulls)
 
-A sleek boot up progress bar for Arch Linux
+A sleek boot-up progress bar for Arch Linux
 
 ![preview](preview.gif)
 
@@ -10,7 +10,11 @@ A sleek boot up progress bar for Arch Linux
 
 Follow instruction on [ArchWiki](https://wiki.archlinux.org/title/plymouth) to install and setup Plymouth.
 
-### AUR (Coming soon!)
+### AUR
+
+```bash
+➜ yay -S plymouth-theme-aregression
+```
 
 ### Manual
 
@@ -49,15 +53,19 @@ This is well documented in the same ArchWiki page. Nevertheless you can execute 
 
 ## Removal
 
-### AUR (Coming Soon!)
+### AUR
 
-### Manual (Not recommended if installed via AUR)
+```bash
+yay -Rs plymouth-theme-aregression                     # ⚠️  Perform manual removal after this
+```
+
+### Manual
 
 - Remove the theme folder
 
     ```bash
     ➜ sudo mv /usr/share/plymouth/themes/aregression ~/
-    ➜ sudo rm -rf ~/aregression                        # ⚠️ Dangerous command! Double check your directory! 
+    ➜ sudo rm -rf ~/aregression                        # ⚠️  Dangerous command! Double check your directory
     ```
 
 ## Credits
