@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Aregression Plymouth
+Description=Sleek boot up progress bar
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/aregression/assets
+ScriptFile=/usr/share/plymouth/themes/aregression/assets/aregression.script
