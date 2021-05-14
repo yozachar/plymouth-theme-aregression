@@ -68,6 +68,15 @@ yay -Rs plymouth-theme-aregression                     # ⚠️ Perform manual r
     ➜ sudo rm -rf ~/aregression                        # ⚠️ Dangerous command! Double check your directory
     ```
 
+## Troubleshooting
+
+- Double check if you've followed the steps mentioned in the [ArchWiki](https://wiki.archlinux.org/title/plymouth) to install Plymouth
+- Make sure that your login manager has the Plymouth daemon enabled, see ArchWiki on how to do it.
+- It's known that lower screen resolution have scaling issue. For now it works well with 1920 x 1080 displays. I'm working on it.
+- Try using installing a grub theme, and see if any graphic driver is causing resolution issues. Related: https://askubuntu.com/questions/362722/how-to-fix-plymouth-splash-screen-in-all-ubuntu-releases
+- Does your grub file contains this line `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`?
+- If nothing works create an [issue](https://github.com/joe733/plymouth-theme-aregression/issues).
+
 ## Credits
 
 - Original project [Darwin Plymouth Theme](https://www.gnome-look.org/content/show.php/Darwin+Plymouth?content=170649)
