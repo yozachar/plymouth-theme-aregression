@@ -39,7 +39,7 @@ This is well documented in the same ArchWiki page. Nevertheless you can execute 
     ```bash
     ➜ sudo plymouth-set-default-theme aregression
     ➜ sudo plymouthd                                   # Start plymouthd
-    ➜ sudo plymouth --show-splash                      # ⚠️ Use Ctrl + Alt + F6 to quit
+    ➜ sudo plymouth --show-splash                      # ⚠️ Use Ctrl + Alt + F7 df/ to quit
     ➜ sudo plymouth --quit                             # Quit plymouthd
     ```
 
