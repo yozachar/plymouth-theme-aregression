@@ -4,7 +4,7 @@
 
 A sleek boot-up progress bar for Arch Linux
 
-![preview](preview.gif)
+https://user-images.githubusercontent.com/38415384/232065388-6b0b53a7-22e6-448f-a648-8af544f023b6.mp4
 
 ## **Installing**
 
@@ -14,6 +14,12 @@ Follow instructions on ArchWiki to install and setup [Plymouth](https://wiki.arc
 $ yay -S plymouth-theme-aregression
 
 # Or use makepkg -si after cloning from https://aur.archlinux.org/plymouth-theme-aregression
+```
+
+#### If you're a [chaotic-aur](https://aur.chaotic.cx) user...
+
+```
+$ sudo pacman -S plymouth-theme-aregression
 ```
 
 ## **Setting up**
