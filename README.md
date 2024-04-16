@@ -8,15 +8,15 @@ A sleek boot-up progress bar for Arch Linux
 
 ## Installing
 
-Follow instruction on [ArchWiki](https://wiki.archlinux.org/title/plymouth) to install and setup Plymouth.
+Follow instructions on ArchWiki to install and setup [Plymouth](https://wiki.archlinux.org/title/plymouth).
 
-### AUR
+🐧 **AUR**
 
 ```bash
 ➜ yay -S plymouth-theme-aregression
 ```
 
-### Manual
+🙌 **Manual**
 
 - Clone this repository:
 
@@ -24,7 +24,7 @@ Follow instruction on [ArchWiki](https://wiki.archlinux.org/title/plymouth) to i
     ➜ sudo git clone https://github.com/joe733/aregression /usr/share/plymouth/themes/aregression
     ```
 
-### Usage
+## Usage
 
 This is well documented in the same ArchWiki page. Nevertheless you can execute the following commands:
 
@@ -39,7 +39,7 @@ This is well documented in the same ArchWiki page. Nevertheless you can execute 
     ```bash
     ➜ sudo plymouth-set-default-theme aregression
     ➜ sudo plymouthd                                   # Start plymouthd
-    ➜ sudo plymouth --show-splash                      # Use Ctrl + Alt + F6 to quit
+    ➜ sudo plymouth --show-splash                      # ⚠️ Use Ctrl + Alt + F6 to quit
     ➜ sudo plymouth --quit                             # Quit plymouthd
     ```
 
@@ -53,19 +53,19 @@ This is well documented in the same ArchWiki page. Nevertheless you can execute 
 
 ## Removal
 
-### AUR
+🐧 **AUR**
 
 ```bash
-yay -Rs plymouth-theme-aregression                     # ⚠️  Perform manual removal after this
+yay -Rs plymouth-theme-aregression                     # ⚠️ Perform manual removal after this
 ```
 
-### Manual
+🙌 **Manual**
 
 - Remove the theme folder
 
     ```bash
     ➜ sudo mv /usr/share/plymouth/themes/aregression ~/
-    ➜ sudo rm -rf ~/aregression                        # ⚠️  Dangerous command! Double check your directory
+    ➜ sudo rm -rf ~/aregression                        # ⚠️ Dangerous command! Double check your directory
     ```
 
 ## Credits
