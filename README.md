@@ -1,10 +1,10 @@
-# **Aregression**
+# **plymouth-theme-aregression**
 
-[![Open Source Love png1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://opensource.org/) [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😎-FFDD67.svg)](https://gitmoji.dev/) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/iesdevs/iedc/pulls)
+[![AUR Version](https://img.shields.io/aur/version/plymouth-theme-aregression)](https://aur.archlinux.org/packages/plymouth-theme-aregression)
 
 A sleek boot-up progress bar for Arch Linux
 
-https://user-images.githubusercontent.com/38415384/232065388-6b0b53a7-22e6-448f-a648-8af544f023b6.mp4
+<https://user-images.githubusercontent.com/38415384/232065388-6b0b53a7-22e6-448f-a648-8af544f023b6.mp4>
 
 ## **Installing**
 
@@ -16,9 +16,10 @@ $ yay -S plymouth-theme-aregression
 # Or use makepkg -si after cloning from https://aur.archlinux.org/plymouth-theme-aregression
 ```
 
-#### If you're a [chaotic-aur](https://aur.chaotic.cx) user...
+*If you're a [chaotic-aur](https://aur.chaotic.cx) user...*
 
-```
+```bash
+# install it using pacman directly
 $ sudo pacman -S plymouth-theme-aregression
 ```
 
@@ -45,7 +46,7 @@ $ yay -Rs plymouth-theme-aregression
 - It's known that lower screen resolution has scaling issue. For now it works well with `1920 x 1080` displays. I'm working on it.
 - Try using installing a grub theme, and see if any graphic driver is causing resolution issues. Related: <https://askubuntu.com/questions/362722/how-to-fix-plymouth-splash-screen-in-all-ubuntu-releases/>
 - Does your grub file contains this line `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`?
-- If nothing works create an [issue](https://github.com/joe733/plymouth-theme-aregression/issues).
+- If nothing works create an [issue](https://github.com/yozachar/plymouth-theme-aregression/issues).
 
 ## **Credits**
 
