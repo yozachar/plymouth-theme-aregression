@@ -4,6 +4,8 @@
 
 A sleek boot up progress bar for Arch Linux
 
+![preview](preview.gif)
+
 ## Installing
 
 Follow instruction on [ArchWiki](https://wiki.archlinux.org/title/plymouth) to install and setup Plymouth.
@@ -25,7 +27,7 @@ This is well documented in the same ArchWiki page. Nevertheless you can execute 
 - List all themes
 
     ```bash
-    ➜ sudo plymouth-set-default-theme -l       # You should see aregression listed
+    ➜ sudo plymouth-set-default-theme -l               # You should see aregression listed
     ```
 
 - Change theme test theme
@@ -60,6 +62,6 @@ This is well documented in the same ArchWiki page. Nevertheless you can execute 
 
 ## Credits
 
-- Original Project [Darwin Plymouth Theme](https://www.gnome-look.org/content/show.php/Darwin+Plymouth?content=170649)
+- Original project [Darwin Plymouth Theme](https://www.gnome-look.org/content/show.php/Darwin+Plymouth?content=170649)
 - Derived from [ubuntu-darwin](https://github.com/ashutoshgngwr/ubuntu-darwin)
 - Inspired by [arch-beat](https://github.com/nenad/arch-beat) and [arch10](https://github.com/manilarome/plymouth-theme-arch10)
