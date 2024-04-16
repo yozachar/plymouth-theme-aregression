@@ -1,4 +1,6 @@
-Window.GetMaxWidth = fun () {
+/* -------------------------------------- Window ----------------------------------- */
+
+Window.GetMaxWidth = fun() {
   i = 0;
   width = 0;
   while (Window.GetWidth(i)) {
@@ -8,7 +10,7 @@ Window.GetMaxWidth = fun () {
   return width;
 };
 
-Window.GetMaxHeight = fun () {
+Window.GetMaxHeight = fun() {
   i = 0;
   height = 0;
   while (Window.GetHeight(i)) {
@@ -22,14 +24,15 @@ anim.imagecount = 20;
 anim.target_width = Window.GetWidth();
 anim.target_height = Window.GetHeight();
 
-fun RotatedImage (index) {
-	index = Math.Int(index);
-	if (!RotatedImageCache[index])
-		RotatedImageCache[index] = anim.original_image.Rotate((Math.Pi * 2 * index) / anim.imagecount).Scale(anim.target_width, anim.target_height);
+fun RotatedImage(index) {
+  index = Math.Int(index);
+  if (!RotatedImageCache[index])
+    RotatedImageCache[index] = anim.original_image.Rotate((Math.Pi * 2 * index) / anim.imagecount).Scale(anim.target_width, anim.target_height);
 
-	return RotatedImageCache[index];
+  return RotatedImageCache[index];
 }
 
+/* -------------------------------------- Animation ----------------------------------- */
 
 if (Plymouth.GetMode() == "suspend" || Plymouth.GetMode() == "resume") {
   background.original_image = ImageNew("suspend.png");
@@ -46,20 +49,22 @@ else {
   anim.original_image = anim.image.Scale(anim.target_width, anim.target_width);
 
   anim.sprite = SpriteNew();
-  anim.sprite.SetImage(RotatedImage (0));
+  anim.sprite.SetImage(RotatedImage(0));
   anim.sprite.SetX((Window.GetX() + Window.GetWidth() - RotatedImage(0).GetWidth()) / 2);
   anim.sprite.SetY(Window.GetY() + Window.GetHeight() * 0.35);
   anim.angle = 0;
   anim.index = 0;
 }
 
-ratio =  logo.original_image.GetWidth() / logo.original_image.GetHeight();
+/* -------------------------------------- Logo ----------------------------------- */
+
+ratio = logo.original_image.GetWidth() / logo.original_image.GetHeight();
 reduction = 0.10;
 logo.image = logo.original_image.Scale(reduction * Window.GetMaxWidth(), reduction / ratio * Window.GetMaxWidth());
 logo.sprite = SpriteNew();
 logo.sprite.SetImage(logo.image);
 logo.opacity_angle = 0;
-logo.sprite.SetX((Window.GetX() + Window.GetMaxWidth()  - logo.image.GetWidth())  / 2);
+logo.sprite.SetX((Window.GetX() + Window.GetMaxWidth() - logo.image.GetWidth()) / 2);
 logo.sprite.SetY(Window.GetY() + Window.GetHeight() * 0.35);
 
 background.image = background.original_image.Scale(Window.GetMaxWidth(), Window.GetMaxHeight());
@@ -67,19 +72,19 @@ background.sprite = SpriteNew();
 background.sprite.SetImage(background.image);
 background.sprite.SetPosition(Window.GetX(), Window.GetY(), -10);
 
-fun refresh_callback () {
+fun refresh_callback() {
   if (status == "normal") {
     anim.index += 1;
     anim.index %= anim.imagecount;
-    anim.sprite.SetImage(RotatedImage (anim.index));
+    anim.sprite.SetImage(RotatedImage(anim.index));
   }
   else {
     anim.sprite.SetOpacity(0);
   }
 }
- 
+
 if (Plymouth.GetMode() != "suspend" && Plymouth.GetMode() != "resume") {
-  Plymouth.SetRefreshFunction (refresh_callback);
+  Plymouth.SetRefreshFunction(refresh_callback);
 }
 
 /* -------------------------------------- Progress Bar ----------------------------------- */
@@ -94,14 +99,14 @@ progress_box.sprite.SetPosition(progress_box.x, progress_box.y, 0);
 progress_bar.original_image = Image("progress_bar.png");
 progress_bar.sprite = Sprite();
 
-progress_bar.x = Window.GetX() + Window.GetWidth()  / 2 - progress_bar.original_image.GetWidth() / 2;
-progress_bar.y = Window.GetY() + Window.GetHeight() * 0.6  - progress_box.image.GetHeight() / 2 + (progress_box.image.GetHeight() - progress_bar.original_image.GetHeight()) / 2;
+progress_bar.x = Window.GetX() + Window.GetWidth() / 2 - progress_bar.original_image.GetWidth() / 2;
+progress_bar.y = Window.GetY() + Window.GetHeight() * 0.6 - progress_box.image.GetHeight() / 2 + (progress_box.image.GetHeight() - progress_bar.original_image.GetHeight()) / 2;
 progress_bar.sprite.SetPosition(progress_bar.x, progress_bar.y, 2);
 
-fun progress_callback (duration, progress) {
-  if (progress_bar.image.GetWidth () != Math.Int (progress_bar.original_image.GetWidth () * progress)) {
+fun progress_callback(duration, progress) {
+  if (progress_bar.image.GetWidth() != Math.Int(progress_bar.original_image.GetWidth() * progress)) {
     progress_bar.image = progress_bar.original_image.Scale(progress_bar.original_image.GetWidth(progress_bar.original_image) * progress, progress_bar.original_image.GetHeight());
-    progress_bar.sprite.SetImage (progress_bar.image);
+    progress_bar.sprite.SetImage(progress_bar.image);
   }
 }
 
@@ -109,8 +114,8 @@ Plymouth.SetBootProgressFunction(progress_callback);
 
 /* ----------------------------------------- Quit ---------------------------------------- */
 
-fun quit_callback () {
-  anim.sprite.SetOpacity (0);
+fun quit_callback() {
+  anim.sprite.SetOpacity(0);
 }
 
 Plymouth.SetQuitFunction(quit_callback);
